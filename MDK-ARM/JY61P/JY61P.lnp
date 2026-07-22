@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"jy61p\startup_stm32f103xb.o"
+"jy61p\main.o"
+"jy61p\stm32f1xx_it.o"
+"jy61p\stm32f1xx_hal_msp.o"
+"jy61p\stm32f1xx_hal_gpio_ex.o"
+"jy61p\stm32f1xx_hal_uart.o"
+"jy61p\stm32f1xx_hal.o"
+"jy61p\stm32f1xx_hal_rcc.o"
+"jy61p\stm32f1xx_hal_rcc_ex.o"
+"jy61p\stm32f1xx_hal_gpio.o"
+"jy61p\stm32f1xx_hal_dma.o"
+"jy61p\stm32f1xx_hal_cortex.o"
+"jy61p\stm32f1xx_hal_pwr.o"
+"jy61p\stm32f1xx_hal_flash.o"
+"jy61p\stm32f1xx_hal_flash_ex.o"
+"jy61p\stm32f1xx_hal_exti.o"
+"jy61p\system_stm32f1xx.o"
+"jy61p\jy61p.o"
+--library_type=microlib --strict --scatter "JY61P\JY61P.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "JY61P.map" -o JY61P\JY61P.axf
