@@ -94,10 +94,15 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  HAL_UART_Receive_IT(&huart1, &g_uart_rx_byte, 1);
+
     
     
   printf("系统启动 JY61P (USART1)...\r\n");
+  printf("正在校准 Z 轴，请保持传感器绝对静止 3 秒钟...\r\n");
+  JY61P_ZeroYaw(); // 调用清零函数
+  printf("Z 轴校准完成！\r\n");
+  //全部弄完了开启接收中断
+  HAL_UART_Receive_IT(&huart1, &g_uart_rx_byte, 1);
   /* USER CODE END 2 */
 
   /* Infinite loop */

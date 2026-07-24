@@ -20,4 +20,8 @@ extern uint8_t g_uart_rx_byte;
 // 解析状态机函数声明
 void JY61P_ParseAngle(uint8_t byte);
 
+//偏航角归零
+void JY61P_ZeroYaw(void);
+
+
 #endif /* __JY61P_H */
